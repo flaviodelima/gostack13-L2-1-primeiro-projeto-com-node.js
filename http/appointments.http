@@ -5,3 +5,6 @@ content-type: application/json
   "provider": "flavio",
   "date": "{{$localDatetime iso8601}}"
 }
+
+###
+GET http://localhost:3333/appointments
