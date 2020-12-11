@@ -2,7 +2,7 @@ POST http://localhost:3333/appointments HTTP/1.1
 content-type: application/json
 
 {
-  "provider": "flavio",
+  "provider_id": "2acc6c43-be32-4b33-8e59-6c61598c45da",
   "date": "{{$localDatetime iso8601}}"
 }
 

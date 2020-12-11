@@ -3,5 +3,9 @@ content-type: application/json
 
 {
     "name": "flavio",
-    "email": "flavio@flavio.com"
+    "email": "flavio3@flavio.com",
+    "password": 123456
 }
+
+###
+GET http://localhost:3333/users HTTP/1.1
