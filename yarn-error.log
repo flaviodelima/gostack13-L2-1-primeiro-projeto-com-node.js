@@ -1,5 +1,5 @@
 Arguments: 
-  /home/flavio/.nvm/versions/node/v12.18.4/bin/node /usr/share/yarn/bin/yarn.js add reflect-metadate
+  /home/flavio/.nvm/versions/node/v12.18.4/bin/node /usr/share/yarn/bin/yarn.js add bcrypt.js
 
 PATH: 
   /home/flavio/.nvm/versions/node/v12.18.4/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/home/flavio/Android/Sdk/tools:/home/flavio/Android/Sdk/platform-tools:/home/flavio/Android/Sdk/tools:/home/flavio/Android/Sdk/platform-tools
@@ -14,7 +14,7 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/reflect-metadate: Not found
+  Error: https://registry.yarnpkg.com/bcrypt.js: Not found
       at Request.params.callback [as _callback] (/usr/share/yarn/lib/cli.js:66987:18)
       at Request.self.callback (/usr/share/yarn/lib/cli.js:140748:22)
       at Request.emit (events.js:315:20)
@@ -43,6 +43,7 @@ npm manifest:
       "date-fns": "^2.16.1",
       "express": "^4.17.1",
       "pg": "^8.5.1",
+      "reflect-metadata": "^0.1.13",
       "typeorm": "^0.2.29",
       "uuid": "^8.3.1"
     },
