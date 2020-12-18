@@ -1,4 +1,16 @@
-POST http://localhost:3333/users HTTP/1.1
+@baseUrl = http://localhost:3333
+# @name getToken
+POST http://localhost:3333/sessions HTTP/1.1
+content-type: application/json
+
+{
+    "email": "flavio3@flavio.com",
+    "password": "123456"
+}
+###
+
+@token = {{getToken.response.body.token}}
+POST {{baseUrl}}/users HTTP/1.1
 content-type: application/json
 
 {
@@ -9,3 +21,15 @@ content-type: application/json
 
 ###
 GET http://localhost:3333/users HTTP/1.1
+
+###
+PATCH {{baseUrl}}/users/avatar
+Authorization: Bearer {{token}}
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
+
+------WebKitFormBoundary7MA4YWxkTrZu0gW
+Content-Disposition: form-data; name="avatar"; filename="AvatarAang.jpeg"
+Content-Type: image/jpeg
+
+< ./images/users.AvatarAang.jpeg
+------WebKitFormBoundary7MA4YWxkTrZu0gW--
