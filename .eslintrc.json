@@ -1,7 +1,8 @@
 {
     "env": {
         "es6": true,
-        "node": true
+        "node": true,
+        "jest":true
     },
     "extends": [
         "airbnb-base",
@@ -34,7 +35,7 @@
       "@typescript-eslint/no-unused-vars": ["error", {
         "argsIgnorePattern": "_"
       }],
-
+      "import/no-extraneous-dependencies": ["error", {"devDependencies": ["**/*.spec.ts", "jest.config.ts"]}],
       "@typescript-eslint/naming-convention": [
         "error",
         {
