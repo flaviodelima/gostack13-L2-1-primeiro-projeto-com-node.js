@@ -7,9 +7,9 @@ import User from '@modules/users/infra/typeorm/entities/User';
 import IUsersRepository from '../repositories/IUsersRepository';
 
 interface IRequest {
-  name: 'string';
-  email: 'string';
-  password: 'string';
+  name: string;
+  email: string;
+  password: string;
 }
 
 @injectable()
