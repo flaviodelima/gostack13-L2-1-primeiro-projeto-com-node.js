@@ -23,7 +23,7 @@ describe('CreateUser', () => {
     expect(user.email).toBe('johndoe@example.com');
   });
 
-  it('should not allow different users to have the same password', async () => {
+  it('should not allow the creation of a user with an email which is already taken by another user', async () => {
     const fakeUsersRepository = new FakeUsersRepository();
     const fakeHashProvider = new FakeHashProvider();
     const createUser = new CreateUserService(

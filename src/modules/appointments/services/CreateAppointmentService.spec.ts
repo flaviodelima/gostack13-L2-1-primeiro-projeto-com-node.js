@@ -19,7 +19,7 @@ describe('CreateAppointment', () => {
     expect(appointment.provider_id).toBe('123123123');
   });
 
-  it('should not be able to create two appoiintments on the same time', async () => {
+  it('should not allow two appointments to be created on the same time', async () => {
     const fakeAppointmentsRepository = new FakeAppointmentsRepository();
     const createAppointment = new CreateAppointmentService(
       fakeAppointmentsRepository,
